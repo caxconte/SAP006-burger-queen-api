@@ -10,4 +10,8 @@ const getOtherExample = (req, res) => {
   res.send('Request getOtherExample feita');
 };
 
-module.exports = { getExample, getOtherExample };
+const teste = (req, res) => {
+  res.send('Request >teste< feito');
+}
+
+module.exports = { getExample, getOtherExample, teste };
