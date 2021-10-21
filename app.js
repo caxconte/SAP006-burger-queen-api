@@ -5,7 +5,11 @@ const cors = require('cors');
 
 const usersRouter = require('./server/routes/usersRouter');
 
+const productsRouter = require('./server/routes/productsRouter');
+
 app.use('/users', usersRouter);
+
+app.use('/products', productsRouter);
 
 app.use(cors());
 
