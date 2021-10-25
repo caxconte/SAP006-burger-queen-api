@@ -10,10 +10,10 @@ router.get('/', async (req, res, next) => {
 });
 
 // INSERE UM USER
-router.post('/', (req, res, next) => {
-  res.status(201).send({
-    message: 'Usuário foi criado',
-  });
+router.post('/', async (req, res, next) => {
+  // console.log(res.body);
+  const users = await models.users.create(req.body);
+  res.status(200).send(users);
 });
 
 // RETORNA OS DADOS DE UM USER
